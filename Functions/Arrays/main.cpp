@@ -1,11 +1,10 @@
 #include<iostream>
 using namespace std;
 
-const int ROWS = 4;	//Количество строк двумерного массива
-const int COLS = 5;	//Количество элементов строки
-
-template<typename T> 
-void FillRand(T Arr[], const int n);
+const int ROWS = 4;	//ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Г¤ГўГіГ¬ГҐГ°Г­Г®ГЈГ® Г¬Г Г±Г±ГЁГўГ 
+const int COLS = 5;	//ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г±ГІГ°Г®ГЄГЁ
+ 
+void FillRand(int Arr[], const int n);
 void FillRand(double Arr[], const int n);
 void FillRand(int Arr[ROWS][COLS], const int ROWS, const int COLS);
 
@@ -28,9 +27,9 @@ void main()
 
 	FillRand(Arr, n);
 	Print(Arr, n);
-	cout << "Сумма элементов масива:\t" << Sum(Arr, n) << endl;
-	cout << "Среднее арифметическое:\t" << Avg(Arr, n) << endl;
-	//cout << "Минимальное значение в массиве:\t" << minValueIn(Arr, n) << endl;
+	cout << "Г‘ГіГ¬Г¬Г  ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±ГЁГўГ :\t" << Sum(Arr, n) << endl;
+	cout << "Г‘Г°ГҐГ¤Г­ГҐГҐ Г Г°ГЁГґГ¬ГҐГІГЁГ·ГҐГ±ГЄГ®ГҐ:\t" << Avg(Arr, n) << endl;
+	//cout << "ГЊГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Гў Г¬Г Г±Г±ГЁГўГҐ:\t" << minValueIn(Arr, n) << endl;
 
 	double Brr[n];
 	FillRand(Brr, n);
@@ -41,10 +40,9 @@ void main()
 	Print(Crr, ROWS, COLS);
 }
 
-template<typename T>
-void FillRand(T Arr[], const int n)
+void FillRand(int Arr[], const int n)
 {
-	//Заполнение случайными числами:
+	//Г‡Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г±Г«ГіГ·Г Г©Г­Г»Г¬ГЁ Г·ГЁГ±Г«Г Г¬ГЁ:
 	for (int i = 0; i < n; i++)
 	{
 		Arr[i] = rand() % 100;
@@ -52,7 +50,7 @@ void FillRand(T Arr[], const int n)
 }
 void FillRand(double Arr[], const int n)
 {
-	//Заполнение случайными числами:
+	//Г‡Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г±Г«ГіГ·Г Г©Г­Г»Г¬ГЁ Г·ГЁГ±Г«Г Г¬ГЁ:
 	for (int i = 0; i < n; i++)
 	{
 		Arr[i] = rand() % 10000;
@@ -73,7 +71,7 @@ void FillRand(int Arr[ROWS][COLS], const int ROWS, const int COLS)
 
 void Print(int Arr[], const int n)
 {
-	//Вывод массива на экран:
+	//Г‚Г»ГўГ®Г¤ Г¬Г Г±Г±ГЁГўГ  Г­Г  ГЅГЄГ°Г Г­:
 	for (int i = 0; i < n; i++)
 	{
 		cout << Arr[i] << "\t";
@@ -82,7 +80,7 @@ void Print(int Arr[], const int n)
 }
 void Print(double Arr[], const int n)
 {
-	//Вывод массива на экран:
+	//Г‚Г»ГўГ®Г¤ Г¬Г Г±Г±ГЁГўГ  Г­Г  ГЅГЄГ°Г Г­:
 	for (int i = 0; i < n; i++)
 	{
 		cout << Arr[i] << "\t";
@@ -104,7 +102,7 @@ void Print(int Arr[ROWS][COLS], const int ROWS, const int COLS)
 
 void Sort(int Arr[], const int n)
 {
-	//Сортировка массива:
+	//Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  Г¬Г Г±Г±ГЁГўГ :
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = i + 1; j < n; j++)
